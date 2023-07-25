@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h1>Object</h1>
+  <h2>create</h2>
+  <script>
+    var hyunjun = {
+      "programmer":"hyunjun",
+      "designer":"jun"
+    };
+    document.write("Programmer : "+hyunjun.programmer+'<br>');
+    document.write("designer : "+hyunjun.designer+'<br>');
+    hyunjun.age = 28;
+    document.write("age : "+hyunjun.age+'<br>');
+    hyunjun["height"] = "186cm";
+    document.write("height : "+hyunjun["height"]+'<br>');
+  </script>
+  <h2>Iterate</h2>
+  <script>
+    for(var key in hyunjun) {
+      document.write(key+' : '+hyunjun[key]+'<br>');
+    }
+  </script>
+  <h2>Property & Method</h2>
+  <script>
+    hyunjun.showAll = function() {
+      for (var key in this) {
+        document.write(key + ' : ' + this[key] + '<br>');
+      }
+    }
+    hyunjun.showAll();
+  </script>
+</body>
+</html>
